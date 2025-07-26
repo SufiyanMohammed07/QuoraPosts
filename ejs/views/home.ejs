@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+     <h1>Quora Posts</h1>
+        <%for(let ars of ar){%>
+            <div class="main">
+            <h3><%=ars.id%></h3>
+            <h2><%=ars.username%></h2>
+            <h2><%=ars.content%></h2>
+            <a href="/post/<%=ars.id%>">See in detail</a>&nbsp;&nbsp;&nbsp;
+            <a href="/post/<%=ars.id%>/edit">Edit Post</a>
+            <br><br>
+            <button><a href="/post/<%=ars.id%>/delete">Delete Post</a></button>
+                </div>
+
+        <%}%>
+        
+
+    
+    <a href="/newpost">create a new post</a>
+    
+</body>
+</html>
